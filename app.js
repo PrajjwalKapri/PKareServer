@@ -30,6 +30,11 @@ app.use(
     tempFileDir: "/tmp/",
   })
 );
+app.get("/", (req, res) => {
+  res
+    .status(200)
+    .send("This is the backend for PKare, a hospital management project");
+});
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
